@@ -1,0 +1,216 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://World/FrameTileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/Environment/PlayerHouse/wall_1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/PlayerHouse/wall_2.png" type="Texture" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/FloorTileset.tres" type="TileSet" id=5]
+[ext_resource path="res://World/PlayerHouse.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Environment/PlayerHouse/HeadBoard.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Environment/PlayerHouse/Bed.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Environment/PlayerHouse/Pillow.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Environment/PlayerHouse/Covers.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Environment/PlayerHouse/Kitchen1.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Environment/PlayerHouse/TV.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Environment/PlayerHouse/Screens.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Environment/PlayerHouse/DressingTable.png" type="Texture" id=16]
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 16, 16, 16, 16, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 16, 16, 16, 16, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=10]
+0/name = "wall_1.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 11 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "wall_2.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 16, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 12 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 62, 9 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 12.5, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 10, 3.5 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 14.5, 4.5 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 14, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 11.5, 7 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 9.5, 4 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 15.5, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 15, 4.5 )
+
+[node name="PlayerHouse" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Floor" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 131072, 2, 0, 131073, 2, 0, 131074, 2, 0, 131075, 2, 0, 131076, 2, 0, 131077, 2, 0, 131078, 2, 0, 131079, 2, 0, 131080, 2, 0, 131081, 1, 0, 131082, 1, 0, 131083, 1, 0, 131084, 1, 0, 131085, 1, 0, 131086, 1, 0, 131087, 1, 0, 196608, 2, 0, 196609, 2, 0, 196610, 2, 0, 196611, 2, 0, 196612, 2, 0, 196613, 2, 0, 196614, 2, 0, 196615, 2, 0, 196616, 2, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 393216, 1, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 1, 0, 393230, 1, 0, 393231, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 1, 0, 458767, 1, 0, 524288, 1, 0, 524289, 1, 0, 524290, 0, 0, 524291, 0, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0 )
+
+[node name="Walls" type="TileMap" parent="."]
+tile_set = SubResource( 10 )
+cell_size = Vector2( 16, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0 )
+
+[node name="Kitchen" type="StaticBody2D" parent="."]
+position = Vector2( 67, 24 )
+
+[node name="Sprite" type="Sprite" parent="Kitchen"]
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kitchen"]
+position = Vector2( 0, 11 )
+shape = SubResource( 18 )
+
+[node name="TVSet" type="StaticBody2D" parent="."]
+position = Vector2( 163, 34 )
+
+[node name="TV" type="Sprite" parent="TVSet"]
+texture = ExtResource( 14 )
+
+[node name="Screen" type="Sprite" parent="TVSet/TV"]
+texture = ExtResource( 15 )
+hframes = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TVSet"]
+position = Vector2( -0.5, 4.5 )
+shape = SubResource( 19 )
+
+[node name="TVArea" type="Area2D" parent="TVSet"]
+position = Vector2( 0, 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TVSet/TVArea"]
+position = Vector2( 0, 4.5 )
+shape = SubResource( 20 )
+
+[node name="BedBehind" type="StaticBody2D" parent="."]
+position = Vector2( 237, 35 )
+
+[node name="HeadBoard" type="Sprite" parent="BedBehind"]
+texture = ExtResource( 8 )
+
+[node name="Pillow" type="Sprite" parent="BedBehind"]
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedBehind"]
+position = Vector2( -0.5, -1.5 )
+shape = SubResource( 17 )
+
+[node name="SaveTrigger" type="Area2D" parent="BedBehind"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedBehind/SaveTrigger"]
+position = Vector2( 0, 9.5 )
+shape = SubResource( 23 )
+
+[node name="DressingTable" type="StaticBody2D" parent="."]
+position = Vector2( 194, 29 )
+
+[node name="Sprite" type="Sprite" parent="DressingTable"]
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DressingTable"]
+position = Vector2( -0.5, 7 )
+shape = SubResource( 21 )
+
+[node name="DressingArea" type="Area2D" parent="DressingTable"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DressingTable/DressingArea"]
+position = Vector2( -0.5, 19 )
+shape = SubResource( 22 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 237, 49 )
+
+[node name="BedAhead" type="StaticBody2D" parent="."]
+position = Vector2( 237, 35 )
+
+[node name="Bed" type="Sprite" parent="BedAhead"]
+position = Vector2( 0, 16 )
+texture = ExtResource( 9 )
+
+[node name="Cover" type="Sprite" parent="BedAhead"]
+position = Vector2( 0, 13 )
+scale = Vector2( 1, 1.125 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedAhead"]
+position = Vector2( -0.5, 21.5 )
+shape = SubResource( 16 )
+
+[node name="Frame" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 7, 0, 11, 7, 0, 12, 7, 0, 13, 7, 0, 14, 7, 0, 15, 1, 0, 65536, 5, 0, 65551, 4, 0, 131072, 5, 0, 131087, 4, 0, 196608, 5, 0, 196623, 4, 0, 262144, 5, 0, 262159, 4, 0, 327680, 5, 0, 327695, 4, 0, 393216, 5, 0, 393231, 4, 0, 458752, 5, 0, 458767, 4, 0, 524288, 2, 0, 524289, 6, 0, 524290, 6, 0, 524291, 6, 0, 524292, 6, 0, 524293, 6, 0, 524294, 6, 0, 524295, 6, 0, 524296, 6, 0, 524297, 6, 0, 524298, 6, 0, 524299, 6, 0, 524300, 6, 0, 524301, 6, 0, 524302, 6, 0, 524303, 3, 0 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 48, 132.5 )
+shape = SubResource( 14 )
+
+[connection signal="body_entered" from="TVSet/TVArea" to="." method="_on_TVArea_body_entered"]
+[connection signal="body_exited" from="TVSet/TVArea" to="." method="_on_TVArea_body_exited"]
+[connection signal="body_entered" from="BedBehind/SaveTrigger" to="." method="_on_SaveTrigger_body_entered"]
+[connection signal="body_exited" from="BedBehind/SaveTrigger" to="." method="_on_SaveTrigger_body_exited"]
+[connection signal="body_entered" from="DressingTable/DressingArea" to="." method="_on_DressingArea_body_entered"]
+[connection signal="body_exited" from="DressingTable/DressingArea" to="." method="_on_DressingArea_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
